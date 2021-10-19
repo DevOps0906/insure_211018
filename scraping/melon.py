@@ -10,5 +10,6 @@ table = driver.find_element_by_xpath(
     '//*[@id="frm"]/div/table/tbody')
 tableRow = table.find_elements_by_tag_name('tr')
 for index, row in enumerate(tableRow):
+    print(index)
     songTitle = row.find_elements_by_tag_name('td')[5]
     print(songTitle.text)
