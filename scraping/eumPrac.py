@@ -9,5 +9,36 @@ driver.get('https://www.eum.go.kr/web/am/amMain.jsp;')
 sidoSelect = Select(driver.find_element_by_xpath('//*[@id="selSido"]'))
 sidoSelect.select_by_visible_text("전라남도")
 
-# work1 전라남도 고흥군 고흥읍 남계리 45 - 1 번지의 데이터를 스크래핑하기 / 공시지가 가져오기
-# driver.implicitly_wait(1)// 함정을 피할수 있는 방법 1 = 1초동안 대기한다
+driver.implicitly_wait(1)
+# //*[@id="selSgg"]
+gun = Select(driver.find_element_by_xpath(
+    '//*[@id="selSgg"]'))
+gun.select_by_visible_text("고흥군")
+
+driver.implicitly_wait(1)
+
+dong = Select(driver.find_element_by_xpath(
+    '//*[@id="selUmd"]'))
+dong.select_by_visible_text('고흥읍')
+
+driver.implicitly_wait(1)
+
+ri = Select(driver.find_element_by_xpath(
+    '//*[@id="selRi"]'))
+ri.select_by_visible_text('남계리')
+
+bobn = driver.find_element_by_xpath(
+    '//*[@id="bobn"]')
+bubn = driver.find_element_by_xpath(
+    '//*[@id="bubn"]')
+
+bobn.send_keys('45')
+bubn.send_keys('1')
+
+button = driver.find_element_by_xpath(
+    '//*[@id="frm"]/fieldset/div[3]/p/span/a')
+button.click()
+
+price = driver.find_element_by_xpath(
+    '//*[@id="appoint"]/div[2]/table/tbody/tr[3]/td')
+print(price.text)
