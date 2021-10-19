@@ -8,9 +8,8 @@ driver.get('https://www.eum.go.kr/web/am/amMain.jsp;')
 
 sidoSelect = Select(driver.find_element_by_xpath('//*[@id="selSido"]'))
 sidoSelect.select_by_visible_text("전라남도")
-
 driver.implicitly_wait(1)
-# //*[@id="selSgg"]
+
 gun = Select(driver.find_element_by_xpath(
     '//*[@id="selSgg"]'))
 gun.select_by_visible_text("고흥군")
