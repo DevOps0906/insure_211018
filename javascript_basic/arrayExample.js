@@ -12,4 +12,11 @@ let car = {
 };
 
 let cars = ["bmw", "hyundai", "volvo", "lexus", 5, 2, car];
-console.log(cars);
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
+
+for (car of cars) {
+  console.log(car);
+}
