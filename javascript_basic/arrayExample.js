@@ -13,10 +13,14 @@ let car = {
 
 let cars = ["bmw", "hyundai", "volvo", "lexus", 5, 2, car];
 
-for (let i = 0; i < cars.length; i++) {
-  console.log(cars[i]);
-}
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
 
-for (car of cars) {
+// for (car of cars) {
+//   console.log(car);
+// }
+
+cars.map((car) => {
   console.log(car);
-}
+});
