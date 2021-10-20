@@ -8,3 +8,6 @@ let car = {
     console.log("엔진 정지");
   },
 };
+
+console.log(car.name);
+car.start();
