@@ -1,10 +1,4 @@
-const Welcome = (a) => {
-  return (
-    <p>
-      안녕하세요 {a.username} 저는 {a.userage} 세 입니다
-    </p>
-  );
-};
+import Welcome from "./commponents/Welcome";
 
 function App() {
   return (
