@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Welcome from "./Welcome";
 
 const ListComponent = () => {
   const [list, setlist] = useState(["bmw", "hyundai", "volvo", "lexus"]);
@@ -7,7 +8,7 @@ const ListComponent = () => {
       {list.map((li) => {
         return (
           <>
-            <p>{li} 차량이 있습니다.</p>
+            <Welcome username={li}></Welcome>
           </>
         );
       })}
