@@ -10,9 +10,6 @@ def rePlaceData(value):
         result += decodedNumber
     return result
 
-# 실습3
-# AIA 생명 치아보험 견적 페이지에서 보장 내역과 보험료을 가져와서 출력을한다
-
 
 def getAIAData(name, birth, gender):
     driver = webdriver.Chrome('./chromedriver')
