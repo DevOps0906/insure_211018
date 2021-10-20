@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const StateExample = () => {
-  let title = "제목 입니다.";
+  const [title, setTitle] = useState("초기 문자");
   const handleChange = (e) => {
     const { value, name } = e.target;
     console.log(value);
-    title = value;
+    setTitle(value);
   };
+
   return (
     <div>
       <p>{title}</p>
