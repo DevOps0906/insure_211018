@@ -1,14 +1,13 @@
-import ListComponent from "./commponents/ListComponent";
-import Snippets from "./commponents/Snippets";
-import StateExample from "./commponents/StateExample";
-import DesignComponent from "./commponents/DesignComponent";
-import Welcome from "./commponents/Welcome";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <DesignComponent></DesignComponent>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/test" exact></Route>
+      </Switch>
+    </Router>
   );
 }
 
