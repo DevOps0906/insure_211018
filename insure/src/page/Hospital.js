@@ -21,6 +21,7 @@ const Hospital = () => {
         yadmNm: searchInput,
       },
     };
+
     axios(option).then((response) => {
       console.log(response.data);
       setHospitalList(response.data.response.body.items.item);
