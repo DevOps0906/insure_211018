@@ -19,7 +19,7 @@ const ApiTest = () => {
     <div>
       <button onClick={handleClick}>데이터가져오기</button>
       {newsData.map((news) => {
-        return <p>{news.title}</p>;
+        return <p key={news.title}>{news.title}</p>;
       })}
     </div>
   );
