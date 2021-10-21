@@ -19,7 +19,7 @@ const PharmacyPage = () => {
     //여러분들의 URL
     axios.get(apiUrl).then(({ data }) => {
       const pharmacyList = data;
-      console.log(pharmacyList);
+      console.log(pharmacyList.response.body.items.item);
       setphList(pharmacyList);
     });
   };
