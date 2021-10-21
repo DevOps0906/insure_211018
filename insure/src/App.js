@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ApiTest from "./commponents/ApiTest";
 import Hospital from "./page/Hospital";
+import HospitalDetail from "./page/HospitalDetail";
 import NewsPage from "./page/NewsPage";
 import PharmacyPage from "./page/PharmacyPage";
 
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/hospital" exact>
           <Hospital></Hospital>
+        </Route>
+        <Route path="/hospitalDetail" exact>
+          <HospitalDetail></HospitalDetail>
         </Route>
       </Switch>
     </Router>

@@ -16,6 +16,7 @@ const HospitalAddress = styled.div``;
 const HospitalListItem = ({ addr, clCd, clCdNm, yadmNm, ykiho }) => {
   const moveToHospitalDetail = () => {
     console.log(ykiho);
+    window.location.href = `/hospitalDetail?ykiho=${ykiho}`;
   };
   return (
     <HospitalListItemBlock>
