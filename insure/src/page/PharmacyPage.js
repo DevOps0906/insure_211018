@@ -15,12 +15,14 @@ const PharmacyPage = () => {
   };
 
   const handleSearchBtn = () => {
-    let apiUrl = `http://apis.data.go.kr/B551182/pharmacyInfoService/getParmacyBasisList?ServiceKey=uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D&sidoCd=210000`;
+    let serviceKey =
+      "uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D"; //본인 키로 변경
+    let apiUrl = `http://apis.data.go.kr/B551182/pharmacyInfoService/getParmacyBasisList?ServiceKey=${serviceKey}&emdongNm=${queryInput}`;
     //여러분들의 URL
     axios.get(apiUrl).then(({ data }) => {
       const pharmacyList = data;
       console.log(pharmacyList.response.body.items.item);
-      setphList(pharmacyList);
+      setphList(pharmacyList.response.body.items.item);
     });
   };
   return (
@@ -30,7 +32,7 @@ const PharmacyPage = () => {
         handleQueryInput={handleQueryInput}
         handleSearchBtn={handleSearchBtn}
       ></Search>
-      {/* <Result></Result> */}
+      <Result pharmacyList={phList}></Result>
     </div>
   );
 };

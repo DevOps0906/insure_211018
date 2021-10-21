@@ -1,10 +1,10 @@
 import React from "react";
 
-const Result = ({ newsData }) => {
+const Result = ({ pharmacyList }) => {
   return (
     <div>
-      {newsData.map((news) => {
-        return <p key={news.title}>{news.title}</p>;
+      {pharmacyList.map((pharmacy) => {
+        return <p key={pharmacy.yadmNm}>{pharmacy.yadmNm}</p>;
       })}
     </div>
   );
