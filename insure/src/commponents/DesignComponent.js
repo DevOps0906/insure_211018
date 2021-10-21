@@ -6,6 +6,7 @@ const DesignComp = styled.div`
   font-size: 20px;
   padding: 20px;
   font-weight: bold;
+  border: 3px solid #1c6ea4;
 `;
 
 const DesignComponent = () => {
