@@ -7,9 +7,11 @@ const EncryptPage = () => {
     const { value } = e.target;
     setplainText(value);
   };
+
   const handleClick = () => {
     setencryptText(caesar.encrypt(3, plainText));
   };
+
   return (
     <div>
       <input onChange={handleChange}></input>

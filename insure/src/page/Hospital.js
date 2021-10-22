@@ -24,7 +24,12 @@ const Hospital = () => {
 
     axios(option).then((response) => {
       console.log(response.data);
-      setHospitalList(response.data.response.body.items.item);
+      if (response.data.response.body.items.item !== "") {
+        setHospitalList(response.data.response.body.items.item);
+      } else {
+        alert("검색결과가 없습니다.");
+        setHospitalList([]);
+      }
     });
   };
 
@@ -38,6 +43,7 @@ const Hospital = () => {
       <Header title="병원목록 조회"></Header>
       <input onChange={handleChange}></input>
       <button onClick={getHospitalList}>병원 조회하기</button>
+
       {hospitalList.map(({ addr, clCd, clCdNm, yadmNm, ykiho }) => {
         return (
           <HospitalListItem
