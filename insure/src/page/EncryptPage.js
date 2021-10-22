@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import caesar from "../lib/caesar";
+import encrypt from "../lib/encrypt";
 const EncryptPage = () => {
   const [plainText, setplainText] = useState("");
   const [encryptText, setencryptText] = useState("");
@@ -9,7 +10,7 @@ const EncryptPage = () => {
   };
 
   const handleClick = () => {
-    setencryptText(caesar.encrypt(3, plainText));
+    setencryptText(encrypt.makeHashValue(plainText));
   };
 
   return (
