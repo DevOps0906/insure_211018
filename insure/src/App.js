@@ -4,6 +4,7 @@ import ApiTest from "./commponents/ApiTest";
 import EncryptPage from "./page/EncryptPage";
 import Hospital from "./page/Hospital";
 import HospitalDetail from "./page/HospitalDetail";
+import InsurePage from "./page/InsurePage";
 import NewsPage from "./page/NewsPage";
 import PharmacyPage from "./page/PharmacyPage";
 
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/encrpytTest" exact>
           <EncryptPage></EncryptPage>
+        </Route>
+        <Route path="/insure" exact>
+          <InsurePage></InsurePage>
         </Route>
       </Switch>
     </Router>
