@@ -7,7 +7,7 @@ scraper = dentalScraper
 
 # pip install flask
 # pip install jsonify
-# pip install request
+# pip install requests
 # pip install flask_cors
 # cmd) python server.py
 
