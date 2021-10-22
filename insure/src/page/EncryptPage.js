@@ -10,7 +10,7 @@ const EncryptPage = () => {
   };
 
   const handleClick = () => {
-    setencryptText(encrypt.makeHashValue(plainText));
+    setencryptText(encrypt.makeAES(plainText));
   };
 
   return (
