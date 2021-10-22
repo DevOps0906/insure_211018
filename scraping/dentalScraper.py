@@ -98,7 +98,3 @@ def getLinaData(name, birth, gender):
             contentsList.append(value.find_elements_by_tag_name('th')[0].text)
     scrapingResult['contents'] = contentsList
     return scrapingResult
-
-
-print(getLinaData("유관우", "890119", 0))
-print(getAIAData("유관우", "890119", 0))
