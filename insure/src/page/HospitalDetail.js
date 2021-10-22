@@ -10,7 +10,7 @@ const HospitalDetail = () => {
 
   useEffect(() => {
     getHospitalDetailData();
-  }, []);
+  });
 
   const getHospitalDetailData = () => {
     console.log("콤포넌트가 마운트 될때 실행됩니다.");

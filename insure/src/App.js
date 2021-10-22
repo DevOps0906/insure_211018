@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ApiTest from "./commponents/ApiTest";
+import EncryptPage from "./page/EncryptPage";
 import Hospital from "./page/Hospital";
 import HospitalDetail from "./page/HospitalDetail";
 import NewsPage from "./page/NewsPage";
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/hospitalDetail" exact>
           <HospitalDetail></HospitalDetail>
+        </Route>
+        <Route path="/encrpytTest" exact>
+          <EncryptPage></EncryptPage>
         </Route>
       </Switch>
     </Router>
